@@ -50,7 +50,7 @@ export function demoResult(req: RunRequest): RunResult {
         usage: { inputTokens: 14, outputTokens: 31 },
         finishReason: 'stop',
         gateway: {
-          cost: '0.0005070',
+          cost: '0.0003380',
           generationId: 'gen_demo_success',
           routing: {
             originalModelId: req.model,
@@ -82,7 +82,7 @@ export function demoResult(req: RunRequest): RunResult {
         usage: { inputTokens: 14, outputTokens: 31 },
         finishReason: 'stop',
         gateway: {
-          cost: '0.0005070',
+          cost: '0.0003380',
           generationId: 'gen_demo_provider_fallback',
           routing: {
             originalModelId: req.model,

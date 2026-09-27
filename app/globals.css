@@ -168,6 +168,10 @@ kbd { font-family: var(--mono); font-size: 11px; opacity: 0.7; }
 .verdict.recovered .icon { color: var(--warn); }
 .verdict.failed .icon { color: var(--err); }
 
+.demo-note {
+  display: flex; align-items: center; gap: 8px; margin: -4px 0 -4px; font-size: 12px; color: var(--warn);
+}
+.demo-note .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .stat { padding: 12px 14px; border-left: 1px solid var(--border); min-width: 0; }
 .stat:first-child { border-left: 0; }

@@ -45,6 +45,13 @@ export function Inspector({ result, diagnosis, loading, live }: Props) {
         </div>
       </div>
 
+      {result.mode === 'demo' ? (
+        <p className="demo-note">
+          <span className="dot" aria-hidden="true" />
+          Sample data from a demo scenario. No model was called and nothing was billed.
+        </p>
+      ) : null}
+
       <dl className="stats">
         <div className="stat"><dt>Latency</dt><dd>{formatMs(result.latencyMs)}</dd></div>
         <div className="stat">
