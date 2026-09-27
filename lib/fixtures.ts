@@ -234,8 +234,9 @@ export function demoResult(req: RunRequest): RunResult {
 
 /** Used when the public catalog cannot be reached (offline, blocked egress). */
 export const FALLBACK_CATALOG: CatalogModel[] = [
-  { id: 'anthropic/claude-sonnet-5', name: 'Claude Sonnet 5', owned_by: 'anthropic', context_window: 1_000_000, tags: ['reasoning', 'tool-use', 'vision'], pricing: { input: '0.000003', output: '0.000015' } },
-  { id: 'anthropic/claude-opus-5', name: 'Claude Opus 5', owned_by: 'anthropic', context_window: 1_000_000, tags: ['reasoning', 'tool-use', 'vision'], pricing: { input: '0.000005', output: '0.000025' } },
+  // Offline fallback only. The live catalog (loaded at runtime) is the source of truth for prices.
+  { id: 'anthropic/claude-sonnet-5', name: 'Claude Sonnet 5', owned_by: 'anthropic', context_window: 1_000_000, tags: ['reasoning', 'tool-use', 'explicit-caching'], pricing: { input: '0.000002', output: '0.00001' } },
+  { id: 'anthropic/claude-opus-5', name: 'Claude Opus 5', owned_by: 'anthropic', tags: ['reasoning', 'tool-use'] },
   { id: 'openai/gpt-6-astra', name: 'GPT-6 Astra', owned_by: 'openai', tags: ['reasoning', 'tool-use', 'vision'] },
   { id: 'openai/gpt-5.4-nano', name: 'GPT-5.4 nano', owned_by: 'openai', tags: ['tool-use'] },
   { id: 'google/gemini-3.1-pro-preview', name: 'Gemini 3.1 Pro Preview', owned_by: 'google', context_window: 1_000_000, tags: ['file-input', 'tool-use', 'reasoning', 'vision'], pricing: { input: '0.000002', output: '0.000012' } },

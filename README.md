@@ -2,7 +2,11 @@
 
 **Send a request through Vercel AI Gateway and see exactly what happened:** which provider served it, what failed on the way, what it cost, and what to change. It runs in the browser and in the terminal.
 
+**Live demo: [gateway-doctor.vercel.app](https://gateway-doctor.vercel.app)**. It runs in demo mode, so try the eight scenarios without an API key.
+
 ![Model fallback diagnosis](shots/02-model-fallback.png)
+
+<sub>Screenshots show the built-in demo scenarios, taken offline, which is why the model list reads "6 models (offline list)". The live site loads the full catalog.</sub>
 
 Built with Next.js 16, React 19, TypeScript, AI SDK 7 and AI Gateway.
 
